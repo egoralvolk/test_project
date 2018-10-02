@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Идентификация анкеты</title>
+</head>
+
+<body>
+Анкета
+<form id="identificate-person">
+    Серия паспорта<input type="text" id="passport_series"> <br>
+    Номер паспорта<input type="text" id="passport_number"> <br>
+    Фамилия<input type="text" id="last_name"> <br>
+    Имя<input type="text" id="first_name"> <br>
+    Отчество<input type="text" id="middle_name"> <br>
+    Дата рождения<input type="date" id="birthday"> <br>
+    <button type="submit">Идентифицировать</button>
+</form>
+<br>
+<div id="result-identification"></div>
+</body>
+
+{% csrf_token %}
+
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+{% load static %}
+<script type='text/javascript' src="{% static "identificate_person.js" %}"></script>
+
+</html>
